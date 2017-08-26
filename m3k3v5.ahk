@@ -1,5 +1,6 @@
 ; m3k3
 ; 游戏分辨率默认为800*600，所以不用担心坐标兼容性
+
 #If WinActive("M3K3")
 	tip1_x := 632 ; tip 锦囊
 	tip1_y := 260
@@ -18,7 +19,37 @@
 			MouseClick % "left", 706, 292
 		}
 	}
+
+	; 重载游戏第一个存档
+	f1:: ; 锦囊=暗度陈仓
+		MouseGetPos, xtemp, ytemp
+		MouseClick % "left", 470, 310 ; 点击存档清单
+		Sleep, 1
+		MouseClick % "left", 470, 225 ; 点击临时存档
+		Sleep, 1
+		MouseClick % "left", 350, 480 ; 点击确定
+		Sleep, 1
+		MouseClick % "left", 640, 30 ; 点击系统
+		Sleep, 1
+		MouseClick % "left", 400, 300 ; 点击回到游戏
+		mousemove % xtemp, ytemp
+	return
 	
+	; 重载游戏临时存档
+	space:: ; 锦囊=暗度陈仓
+		MouseGetPos, xtemp, ytemp
+		MouseClick % "left", 470, 310 ; 点击存档清单
+		Sleep, 1
+		MouseClick % "left", 470, 440 ; 点击临时存档
+		Sleep, 1
+		MouseClick % "left", 350, 480 ; 点击确定
+		Sleep, 1
+		MouseClick % "left", 640, 30 ; 点击系统
+		Sleep, 1
+		MouseClick % "left", 400, 300 ; 点击回到游戏
+		mousemove % xtemp, ytemp
+	return
+
 	; 锦囊：暗度陈仓、严阵以待，测试通过
 	\:: ; 锦囊=暗度陈仓
 		loop 10{
