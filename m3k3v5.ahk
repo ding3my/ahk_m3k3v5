@@ -21,7 +21,7 @@
 	}
 
 	; 重载游戏第一个存档
-	f1:: ; 锦囊=暗度陈仓
+	f1::
 		MouseGetPos, xtemp, ytemp
 		MouseClick % "left", 470, 310 ; 点击存档清单
 		Sleep, 1
@@ -36,7 +36,7 @@
 	return
 	
 	; 重载游戏临时存档
-	space:: ; 锦囊=暗度陈仓
+	space::
 		MouseGetPos, xtemp, ytemp
 		MouseClick % "left", 470, 310 ; 点击存档清单
 		Sleep, 1
@@ -50,18 +50,18 @@
 		mousemove % xtemp, ytemp
 	return
 
-	; 锦囊：暗度陈仓、严阵以待，测试通过
+	; 锦囊：暗度陈仓、严阵以待，测试通过。ru4a.6xx 严阵以待 2 暗度陈仓
 	\:: ; 锦囊=暗度陈仓
 		loop 10{
 			send % "{TAB down}{f1 down}{Backspace down}{TAB up}{f1 up}{Backspace up}"
-			send % "ru4a.62" ; 44 严阵以待 2 暗度陈仓
+			send % "ru4a.62"
 			Send % "{enter down}{enter up}"
 		}
 	return
 	':: ; 锦囊=严阵以待
 		loop 10{
 			send % "{TAB down}{f1 down}{Backspace down}{TAB up}{f1 up}{Backspace up}"
-			send % "ru4a.644" ; 44 严阵以待 2 暗度陈仓
+			send % "ru4a.644"
 			Send % "{enter down}{enter up}"
 		}
 	return
