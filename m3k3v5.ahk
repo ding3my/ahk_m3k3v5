@@ -25,7 +25,7 @@
 		MouseGetPos, xtemp, ytemp
 		MouseClick % "left", 470, 310 ; 点击存档清单
 		Sleep, 1
-		MouseClick % "left", 470, 225 ; 点击临时存档
+		MouseClick % "left", 470, 225 ; 点击第一个存档
 		Sleep, 1
 		MouseClick % "left", 350, 480 ; 点击确定
 		Sleep, 1
